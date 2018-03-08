@@ -1,43 +1,13 @@
 import React, { Component } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
+import Greeting from './modules/greeting'
 
-
-class Home extends Component {
+class Juha extends Component {
 
 
   componentDidMount (){
-    //JUHA.BLOG REQUEST
 
-        let juhaBlogRequest = new XMLHttpRequest();
-
-        juhaBlogRequest.open('GET', 'http://juha.blog/wp-json/wp/v2/posts');
-
-
-
-          if (juhaBlogRequest.status >= 200 && juhaBlogRequest.status < 400) {
-            let JBData = JSON.parse(juhaBlogRequest.responseText);
-            console.log(JBData);
-
-            createHTML(JBData);
-
-          } else {
-            console.log("We connected to the server, but it returned an error.");
-          }
-
-
-        juhaBlogRequest.onerror = function errorlog() {
-          console.log("Connection error");
-        };
-
-        juhaBlogRequest.send();
-
-
-
-    function createHTML(postsJBData) {
-
-
-    }
 
   }
 
@@ -51,11 +21,9 @@ class Home extends Component {
 
       <ReactCSSTransitionGroup className='xiong-container' component='article' transitionName='card' transitionEnterTimeout={1000} transitionLeaveTimeout={1000} transitionAppear={true} transitionAppearTimeout={1000}>
       <div className='xiong-headline-banner'>
-        <h2>Goog morning Juha</h2>
+        <Greeting personName="Juha"/>
       </div>
         <div className='xiongSingleArticle'>
-
-
 
 
         </div>
@@ -65,4 +33,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Juha;

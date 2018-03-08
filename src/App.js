@@ -4,7 +4,7 @@ import './App.css';
 
 
 
-import Home from './components/userviews/juha';
+import Juha from './components/userviews/juha';
 
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Juha}/>
 
           </Switch>
         </div>
