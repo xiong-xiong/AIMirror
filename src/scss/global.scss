@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import "vars.scss";
+
+
+body {
+  background: $black;
+  font-size: 16px;
+  min-height: 100vh;
+  color: $brand1;
+}
+
+h1, h2, h3, h4 {
+  font-family: $headlinefont;
+  font-weight: 300;
+  padding-top: 25px;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+
+
+
+.xiong-container {
+  width: calc(95% - 90px);
+  margin: auto;
+
+}
